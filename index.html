@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameHub - Game Store</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0d12;
+            color: white;
+        }
+
+        header {
+            background: #151821;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #292d38;
+        }
+
+        header h1 {
+            margin: 0 0 18px;
+            color: #00ff88;
+            font-size: 38px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            padding: 55px 20px;
+            text-align: center;
+            background: linear-gradient(
+                135deg,
+                #10141d,
+                #151b25
+            );
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            color: #b8becb;
+            font-size: 18px;
+        }
+
+        .search {
+            margin: 25px auto 0;
+            max-width: 500px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .game {
+            background: #171b24;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #292e39;
+            transition: transform 0.2s;
+        }
+
+        .game:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-image {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            background: linear-gradient(
+                135deg,
+                #242a36,
+                #11141b
+            );
+        }
+
+        .game-info {
+            padding: 18px;
+        }
+
+        .game-info h3 {
+            margin-top: 0;
+        }
+
+        .game-info p {
+            color: #9da4b2;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #00ff88;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buy {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #00ff88;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .category {
+            padding: 12px 18px;
+            background: #171b24;
+            border: 1px solid #292e39;
+            border-radius: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            border-top: 1px solid #292d38;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>GAMEHUB</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#store">Store</a>
+        <a href="#">Library</a>
+        <a href="#">Community</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h2>Discover Your Next Game</h2>
+
+    <p>
+        Explore amazing games and build your collection.
+    </p>
+
+    <div class="search">
+        <input
+            type="text"
+            placeholder="Search for games..."
+        >
+    </div>
+
+</section>
+
+
+<main class="container">
+
+    <h2 class="section-title">
+        🔥 Featured Games
+    </h2>
+
+    <div class="games" id="store">
+
+
+        <div class="game">
+
+            <div class="game-image">
+                ⚔️
+            </div>
+
+            <div class="game-info">
+
+                <h3>Shadow Warriors</h3>
+
+                <p>
+                    Enter a dangerous world of warriors
+                    and ancient battles.
+                </p>
+
+                <div class="price">
+                    $19.99
+                </div>
+
+                <button class="buy">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="game">
+
+            <div class="game-image">
+                🚀
+            </div>
+
+            <div class="game-info">
+
+                <h3>Galaxy Racer</h3>
+
+                <p>
+                    Race futuristic ships across
+                    the galaxy.
+                </p>
+
+                <div class="price">
+                    $14.99
+                </div>
+
+                <button class="buy">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="game">
+
+            <div class="game-image">
+                🧟
+            </div>
+
+            <div class="game-info">
+
+                <h3>Zombie Night</h3>
+
+                <p>
+                    Survive the night and defeat
+                    waves of zombies.
+                </p>
+
+                <div class="price">
+                    $9.99
+                </div>
+
+                <button class="buy">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="game">
+
+            <div class="game-image">
+                🏎️
+            </div>
+
+            <div class="game-info">
+
+                <h3>Street Racer</h3>
+
+                <p>
+                    Compete against other racers
+                    on the streets.
+                </p>
+
+                <div class="price">
+                    FREE
+                </div>
+
+                <button class="buy">
+                    Play Free
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">
+        🎮 Categories
+    </h2>
+
+    <div class="categories">
+
+        <div class="category">Action</div>
+        <div class="category">RPG</div>
+        <div class="category">Racing</div>
+        <div class="category">Adventure</div>
+        <div class="category">Strategy</div>
+        <div class="category">Sports</div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    © 2026 GameHub
+    <br>
+    Your next adventure starts here.
+
+</footer>
+
+</body>
+
+</html>
