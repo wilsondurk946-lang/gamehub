@@ -237,20 +237,43 @@ const SUPABASE_KEY = "YOUR_PUBLISHABLE_KEY";
     SUPABASE_KEY
   );
 
-  async function loadGames() {
+  
+async function loadGames() {
     const { data, error } = await supabaseClient
-      .from("games")
-      .select("*");
+        .from("games")
+        .select("*");
 
     if (error) {
-      console.error("Could not load games:", error.message);
-      return;
+        console.error("Could not load games:", error);
+        return;
     }
 
     console.log("Games loaded from Supabase:", data);
-  }
 
-  loadGames();
+    const gamesContainer = document.querySelector(".games");
+
+    if (!gamesContainer || !data) return;
+
+    data.forEach((game) => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+
+        const title = document.createElement("h3");
+        title.textContent = game.title || "Untitled Game";
+
+        const description = document.createElement("p");
+        description.textContent = game.description || "";
+
+        const category = document.createElement("p");
+        category.textContent = game.category || "";
+
+        card.append(title, description, category);
+        gamesContainer.appendChild(card);
+    });
+}
+
+loadGames();
+
 </script>
 
 </body>
