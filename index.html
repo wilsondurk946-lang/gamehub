@@ -251,7 +251,7 @@ async function loadGames() {
     console.log("Games loaded from Supabase:", data);
 
     const gamesContainer = document.querySelector(".games");
-
+gamesContainer.innerHTML = "";
     if (!gamesContainer || !data) return;
 
     data.forEach((game) => {
